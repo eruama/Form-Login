@@ -11,12 +11,14 @@ body {
     align-items: center;
     min-height: 100vh;
     background: #111424;
-    overflow: hidden;
+    overflow-x: hidden;
+    overflow-y: auto;
+    padding: 40px 0;
 }
 
 .login-kotak {
     position: relative;
-    width: 400px;
+    width: 45%;
     padding: 40px;
     background: rgba(255, 255, 255, 0.15);
     backdrop-filter: blur(10px);
@@ -30,12 +32,13 @@ body {
 }
 
 .particles-container {
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
     z-index: 0;
+    pointer-events: none;
 }
 
 .particle {
@@ -234,4 +237,16 @@ body {
 .regist a:hover{
     opacity: 1;
     text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    .login-kotak{
+        width: 90%;
+        height: auto;
+        padding: 30px 20px;
+        margin: 20px auto;
+    }
+    form{
+        height: auto;
+    }
 }
